@@ -109,8 +109,8 @@ module.exports = {
     const defaults = {
       x: state.browserX,
       y: state.browserY,
-      width: state.browserWidth || 1280,
-      height: state.browserHeight || 720,
+      width: state.browserWidth || 1920,
+      height: state.browserHeight || 1080,
       devTools: state.isBrowserDevToolsOpen,
       minWidth: 100,
       minHeight: 100,
@@ -160,6 +160,12 @@ module.exports = {
 
   _render (url, projectRoot, automation, options = {}) {
     const win = Windows.create(projectRoot, options)
+
+    if (!options.isTextTerminal) {
+      win.maximize()
+    } else {
+      win.setSize(options.width, options.height)
+    }
 
     automation.use(_getAutomation(win, options))
 

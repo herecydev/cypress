@@ -430,7 +430,7 @@ export = {
 
       // set the window size for headless to a better default
       // https://github.com/cypress-io/cypress/issues/6210
-      args.push('--window-size=1280,720')
+      args.push('--window-size=1920,1080')
     }
 
     // force ipv4

@@ -15,7 +15,7 @@ const xvfbOptions = {
   timeout: 30000, // milliseconds
   // need to explicitly define screen otherwise electron will crash
   // https://github.com/cypress-io/cypress/issues/6184
-  xvfb_args: ['-screen', '0', '1280x1024x24'],
+  xvfb_args: ['-screen', '0', '1920x1080x24'],
   onStderrData (data) {
     if (debugXvfb.enabled) {
       debugXvfb(data.toString())

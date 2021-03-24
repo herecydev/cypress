@@ -69,7 +69,7 @@ if (isWindows()) {
   // this should always match cli/lib/exec/xvfb.js
   commandAndArguments.args = [
     `-as`,
-    `"-screen 0 1280x1024x24"`,
+    `"-screen 0'1920x1080x24'"`,
     `--`,
     'node',
   ]
